@@ -14,10 +14,10 @@ Smooth := SkeletalCategoryOfSmoothMaps( );
 Display( Smooth );
 #! A CAP category with name SkeletalSmoothMaps:
 #! 
-#! 49 primitive operations were used to derive 93 operations for this category wh\
+#! 49 primitive operations were used to derive 92 operations for this category wh\
 #! ich algorithmically
+#! * IsLinearCategoryOverCommutativeSemiring
 #! * IsCartesianCategory
-#! * IsLinearCategoryOverCommutativeRing
 #! * IsSymmetricMonoidalCategory
 #! and furthermore mathematically
 #! * IsStrictMonoidalCategory

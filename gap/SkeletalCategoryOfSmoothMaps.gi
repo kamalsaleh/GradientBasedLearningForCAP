@@ -29,7 +29,7 @@ InstallGlobalFunction( SkeletalCategoryOfSmoothMaps,
     SetIsCartesianCategory( Smooth, true );
     SetIsStrictMonoidalCategory( Smooth, true );
     SetIsSymmetricMonoidalCategory( Smooth, true );
-    SetIsLinearCategoryOverCommutativeRing( Smooth, true );
+    SetIsLinearCategoryOverCommutativeSemiring( Smooth, true );
     
     ##
     
@@ -38,12 +38,12 @@ InstallGlobalFunction( SkeletalCategoryOfSmoothMaps,
     reals!.Name := "Reals";
     
     # or IsFloat
-    reals!.RingElementFilter := IsRingElement;
+    reals!.SemiringElementFilter := IsRingElement;
     
     # or Float
     reals!.interpret_rationals_func := IdFunc;
     
-    SetCommutativeRingOfLinearCategory( Smooth, reals );
+    SetCommutativeSemiringOfLinearCategory( Smooth, reals );
     
     ##
     AddObjectConstructor( Smooth,
@@ -311,7 +311,7 @@ InstallGlobalFunction( SkeletalCategoryOfSmoothMaps,
         
     end );
     
-    AddMultiplyWithElementOfCommutativeRingForMorphisms( Smooth,
+    AddMultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth,
       
       function ( Smooth, a, f )
         local map, jacobian_matrix;
@@ -1092,7 +1092,7 @@ InstallOtherMethod( \.,
             
             s := PreComposeList( Smooth, [ SubtractionForMorphisms( Smooth, f, m ), squares, Smooth.Sum( n ) ] );
             
-            return MultiplyWithElementOfCommutativeRingForMorphisms( Smooth, 1 / n, s );
+            return MultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth, 1 / n, s );
             
           end;
         
@@ -1365,7 +1365,7 @@ InstallOtherMethod( \.,
             total_sum := PreComposeList( Smooth, [ diff, square, sum ] );
             
             # return the average
-            return MultiplyWithElementOfCommutativeRingForMorphisms( Smooth, 1 / n, total_sum );
+            return MultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth, 1 / n, total_sum );
             
           end;
           
@@ -1486,7 +1486,7 @@ InstallOtherMethod( \.,
             total_sum := PreCompose( Smooth, mul, Smooth.Sum( n ) );
             
             # return the average
-            return MultiplyWithElementOfCommutativeRingForMorphisms( Smooth, -1 / n, total_sum );
+            return MultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth, -1 / n, total_sum );
             
           end;
           
