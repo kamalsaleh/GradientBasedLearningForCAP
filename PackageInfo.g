@@ -87,6 +87,14 @@ AvailabilityTest := function()
 
 TestFile := "tst/testall.g",
 
-Keywords := [ "Explore Categorical Machine Learning" ],
+Keywords := [ "Skeletal Category of Smooth Maps",
+               "Gradient Based Learning",
+               "Category of Parameterized Smooth Maps",
+               "Category of Lenses",
+               "Neural Networks",
+               "Backpropagation",
+               "Category Theory",
+               "Applied Category Theory",
+                ],
 
 ));
