@@ -520,8 +520,8 @@ InstallOtherMethod( \.,
                 p3 := ProjectionInFactorOfDirectProductWithGivenDirectProduct( Smooth, [ P, P, P ], 3, P3 );
                 
                 s := AdditionForMorphisms( Smooth,
-                        MultiplyWithElementOfCommutativeRingForMorphisms( Smooth, learning_rate, p3 ),
-                        MultiplyWithElementOfCommutativeRingForMorphisms( Smooth, momentum, p1 ) );
+                        MultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth, learning_rate, p3 ),
+                        MultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth, momentum, p1 ) );
                 
                 put := UniversalMorphismIntoDirectProductWithGivenDirectProduct( Smooth,
                             [ P, P ], P3, [ s, AdditionForMorphisms( Smooth, p2, s ) ], P2 );
@@ -742,7 +742,7 @@ InstallOtherMethod( \.,
                 p2 := ProjectionInFactorOfDirectProductWithGivenDirectProduct( Smooth, [ P, P ], 2, P2 );
                 
                 put := AdditionForMorphisms( Smooth,
-                          p1, MultiplyWithElementOfCommutativeRingForMorphisms( Smooth, learning_rate, p2 ) );
+                          p1, MultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth, learning_rate, p2 ) );
                 
                 S := ObjectConstructor( Lenses, Pair( P, P ) );
                 
@@ -838,8 +838,8 @@ InstallOtherMethod( \.,
                 put_1 := AdditionForMorphisms( Smooth, p1, SmoothMap( Smooth, TxP4, [ 1 ], Smooth.( 1 ) ) );
                 
                 m := AdditionForMorphisms( Smooth,
-                          MultiplyWithElementOfCommutativeRingForMorphisms( Smooth, beta_1, p2 ),
-                          MultiplyWithElementOfCommutativeRingForMorphisms( Smooth, 1 - beta_1, p5 ) );
+                          MultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth, beta_1, p2 ),
+                          MultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth, 1 - beta_1, p5 ) );
                 
                 put_2 := m;
                 
@@ -856,9 +856,9 @@ InstallOtherMethod( \.,
                 m_hat := MultiplicationForMorphisms( Smooth, m, b );
                 
                 v := AdditionForMorphisms( Smooth,
-                          MultiplyWithElementOfCommutativeRingForMorphisms( Smooth,
+                          MultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth,
                               beta_2, p3 ),
-                          MultiplyWithElementOfCommutativeRingForMorphisms( Smooth,
+                          MultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth,
                               1 - beta_2, MultiplicationForMorphisms( Smooth, p5, p5 ) ) );
                 
                 put_3 := v;
@@ -888,7 +888,7 @@ InstallOtherMethod( \.,
                               DirectProductFunctorial( Smooth, ListWithIdenticalEntries( n, Smooth.Sqrt ) ) ) ),
                         DirectProductFunctorial( Smooth, ListWithIdenticalEntries( n, Smooth.Power( -1 ) ) ) );
                 
-                s := MultiplyWithElementOfCommutativeRingForMorphisms( Smooth, learning_rate, MultiplicationForMorphisms( Smooth, s, m_hat ) );
+                s := MultiplyWithElementOfCommutativeSemiringForMorphisms( Smooth, learning_rate, MultiplicationForMorphisms( Smooth, s, m_hat ) );
                 
                 put_4 := AdditionForMorphisms( Smooth, p4, s );
                 

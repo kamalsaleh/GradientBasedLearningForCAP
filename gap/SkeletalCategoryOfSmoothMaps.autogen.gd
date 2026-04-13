@@ -68,13 +68,12 @@
 #! * <Ref BookName="MonoidalCategories" Func="LeftUnitorInverse" Label="for Is" />
 #! * <Ref BookName="MonoidalCategories" Func="LeftUnitorInverseWithGivenTensorProduct" Label="for Is" />
 #! * <Ref BookName="MonoidalCategories" Func="LeftUnitorWithGivenTensorProduct" Label="for Is" />
-#! * <Ref BookName="CAP" Func="LinearCombinationOfMorphisms" Label="for Is" />
 #! * <Ref BookName="ToolsForCategoricalTowers" Func="MorphismBetweenDirectProducts" Label="for Is" />
 #! * <Ref BookName="ToolsForCategoricalTowers" Func="MorphismBetweenDirectProductsWithGivenDirectProducts" Label="for Is" />
 #! * <Ref BookName="CAP" Func="MorphismConstructor" Label="for Is" />
 #! * <Ref BookName="CAP" Func="MorphismDatum" Label="for Is" />
 #! * <Ref BookName="GradientBasedLearningForCAP" Func="MultiplicationForMorphisms" Label="for Is" />
-#! * <Ref BookName="CAP" Func="MultiplyWithElementOfCommutativeRingForMorphisms" Label="for Is" />
+#! * <Ref BookName="CAP" Func="MultiplyWithElementOfCommutativeSemiringForMorphisms" Label="for Is" />
 #! * <Ref BookName="CAP" Func="ObjectConstructor" Label="for Is" />
 #! * <Ref BookName="CAP" Func="ObjectDatum" Label="for Is" />
 #! * <Ref BookName="CAP" Func="PostCompose" Label="for Is" />
